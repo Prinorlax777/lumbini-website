@@ -1,0 +1,4 @@
+// Opens and closes the menu on phones
+document.getElementById("menu-btn").addEventListener("click", function () {
+  document.getElementById("menu").classList.toggle("open");
+});

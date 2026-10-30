@@ -1,0 +1,107 @@
+/* =====================================================
+   LUMBINI WEBSITE - style.css
+   Easy edits: change colours and the hero image below.
+   ===================================================== */
+
+:root {
+  --green:  #1f3b2d;   /* main dark colour (header, footer) */
+  --saffron:#d9902f;   /* accent colour (buttons, links)    */
+  --light:  #f5f3ee;   /* light section background          */
+  --text:   #2b2b2b;   /* normal text                       */
+  --hero-image: url("images/hero.svg");  /* <-- change hero picture here */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: #fff;
+}
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+img { max-width: 100%; display: block; }
+a { color: var(--saffron); }
+
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+section { padding: 60px 0; }
+.light { background: var(--light); }
+.center { text-align: center; }
+.section-title { font-size: 2rem; margin-bottom: 10px; color: var(--green); }
+.section-sub { max-width: 650px; margin: 0 auto 35px; }
+
+/* ---------- Header / Navigation ---------- */
+header { background: var(--green); position: sticky; top: 0; z-index: 10; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.logo { font-family: Georgia, serif; font-size: 1.5rem; color: #fff; text-decoration: none; }
+.nav ul { list-style: none; display: flex; gap: 22px; }
+.nav ul a { color: #fff; text-decoration: none; padding-bottom: 4px; }
+.nav ul a:hover, .nav ul a.active { border-bottom: 2px solid var(--saffron); }
+.menu-btn { display: none; background: none; border: 0; color: #fff; font-size: 1.8rem; cursor: pointer; }
+
+/* ---------- Hero (big top banner) ---------- */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), var(--hero-image) center / cover;
+  color: #fff; text-align: center; padding: 120px 0;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 12px; }
+.hero p { max-width: 620px; margin: 0 auto 25px; font-size: 1.15rem; }
+.page-banner { padding: 70px 0; }
+.page-banner h1 { font-size: 2.4rem; }
+
+.btn {
+  display: inline-block; background: var(--saffron); color: #fff;
+  padding: 12px 26px; border-radius: 4px; text-decoration: none; border: 0;
+  font-size: 1rem; cursor: pointer;
+}
+.btn:hover { background: #b9761c; }
+
+/* ---------- Cards (used for places, attractions) ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+.card { background: #fff; border: 1px solid #e3dfd5; border-radius: 6px; overflow: hidden; }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-body { padding: 18px; }
+.card-body h3 { margin-bottom: 8px; color: var(--green); }
+
+/* ---------- Two columns: text + image ---------- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.two-col img { border-radius: 6px; }
+.two-col p { margin-bottom: 14px; }
+
+/* ---------- Timeline (history) ---------- */
+.timeline { border-left: 3px solid var(--saffron); padding-left: 25px; max-width: 750px; margin: 0 auto; }
+.timeline .item { margin-bottom: 28px; }
+.timeline h3 { color: var(--green); }
+
+/* ---------- Gallery ---------- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+.gallery figure { overflow: hidden; border-radius: 6px; background: #000; }
+.gallery img { width: 100%; height: 220px; object-fit: cover; transition: transform .3s; }
+.gallery img:hover { transform: scale(1.06); }
+.gallery figcaption { background: #fff; padding: 8px 12px; font-size: .9rem; }
+
+/* ---------- Lists / info box ---------- */
+.info-box { background: #fff; border-left: 4px solid var(--saffron); padding: 20px; margin-bottom: 20px; }
+.info-box ul { margin-left: 20px; }
+
+/* ---------- Contact form ---------- */
+form { max-width: 600px; margin: 0 auto; }
+label { display: block; margin: 14px 0 4px; font-weight: bold; }
+input, textarea {
+  width: 100%; padding: 10px; border: 1px solid #bbb; border-radius: 4px; font: inherit;
+}
+textarea { height: 140px; resize: vertical; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--green); color: #fff; text-align: center; padding: 25px 0; font-size: .9rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .menu-btn { display: block; }
+  .nav ul { display: none; flex-direction: column; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--green); padding: 10px 5%; }
+  .nav ul.open { display: flex; }
+  .nav ul li { padding: 8px 0; }
+  .hero h1 { font-size: 2.1rem; }
+  .two-col { grid-template-columns: 1fr; }
+}

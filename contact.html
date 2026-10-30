@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Lumbini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER / MENU ========== -->
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Lumbini</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">&#9776;</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="light page-banner center">
+    <div class="container">
+      <h1 class="section-title">Contact Us</h1>
+      <p class="section-sub">Have a question about visiting Lumbini? Send us a message.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <!-- This form is for display only. To really send messages you need a server (for example PHP). -->
+      <form onsubmit="alert('Thank you! Your message has been received.'); return false;">
+        <label for="name">Your name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+
+        <br><br>
+        <button type="submit" class="btn">Send message</button>
+      </form>
+
+      <br><br>
+      <div class="info-box" style="max-width:600px; margin:0 auto">
+        <h3>School information</h3>
+        <ul>
+          <li>School: Horizon Gautam Buddha School</li>
+          <li>Email: example@email.com</li>
+          <li>Phone: 000-0000000</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Lumbini Website | Horizon Gautam Buddha School | Grade 11/12 Computer Science Project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
